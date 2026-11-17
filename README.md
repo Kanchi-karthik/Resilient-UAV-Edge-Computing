@@ -20,7 +20,7 @@
 | **Project Title** | **Resilient UAV Edge Computing for Disaster Response: Runtime Detection and Recovery of Mission-Critical Task Stalls** |
 | **Course Code** | **24CS798 – DISSERTATION PHASE – I (M.Tech Semester 3)** |
 | **Student Investigator** | **Kanchi Karthik** (Roll No: `CB.SC.P2CSE25016`) |
-| **Research Supervisor** | **Dr. Vishnuvarthan R**, Assistant Professor (Selection Grade) |
+| **Research Supervisor** | **Dr. Vishnu S**, Assistant Professor (Selection Grade) |
 | **Department** | Department of Computer Science and Engineering, Amrita School of Computing |
 | **Institution** | Amrita Vishwa Vidyapeetham, Coimbatore, India |
 | **Scope for Phase 1** | **Analytical Modeling, Aerodynamic Hover Formulation, & Algorithm 1: Chain-Aware CBBA** |
