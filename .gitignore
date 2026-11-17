@@ -1,0 +1,51 @@
+# ==============================================================================
+# Git Ignore Configuration for Resilient-UAV-Edge-Computing
+# ==============================================================================
+
+# Compiled Java Class Files & Build Directories
+bin/
+out/
+target/
+build/
+*.class
+
+# Eclipse Metadata
+.classpath
+.project
+.settings/
+.checkstyle
+.factorypath
+
+# IntelliJ IDEA Metadata
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code Metadata
+.vscode/
+
+# OS-specific temporary files
+Thumbs.db
+.DS_Store
+*.tmp
+*~
+
+# Log files and local test outputs
+*.log
+run_output.log
+out.log
+simulation_console.log
+
+# Scratch and review working files
+*.docx
+*.zip
+__pycache__/
+*.pyc
+
+# Explicitly preserve vital directories
+!jars/
+!assets/
+!docs/
+!topologies/
+!results_phase1/
