@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resilient UAV Edge Computing | Disaster Response Documentation Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/amrita_uav_hero.png">
+  <!-- MathJax for rendering KaTeX/LaTeX math -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- ==============================================================================
+       TEXTURED CRIMSON SIDEBAR
+       ============================================================================== -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-badge">M.Tech Phase 1 · 24CS798</div>
+      <h2 class="brand-title">UAV Edge Portal</h2>
+      <p class="brand-subtitle">Resilient Aerial Edge Computing</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <div class="nav-group-title">Navigation Portal</div>
+        <a href="index.html" class="nav-link active">
+          <span class="nav-icon">🏠</span> Home & Overview
+        </a>
+        <a href="documentation.html" class="nav-link">
+          <span class="nav-icon">📖</span> User Guide & Docs
+        </a>
+        <a href="results.html" class="nav-link">
+          <span class="nav-icon">📊</span> Results & Benchmarks
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">On This Page</div>
+        <a href="#overview" class="nav-link"><span class="nav-icon">📌</span> Overview</a>
+        <a href="#introduction" class="nav-link"><span class="nav-icon">🚁</span> Introduction</a>
+        <a href="#objectives" class="nav-link"><span class="nav-icon">🎯</span> Objectives</a>
+        <a href="#problem" class="nav-link"><span class="nav-icon">⚠️</span> Problem Statement</a>
+        <a href="#applications" class="nav-link"><span class="nav-icon">🌐</span> Application Horizons</a>
+        <a href="#methodology" class="nav-link"><span class="nav-icon">⚙️</span> Methodology</a>
+        <a href="#team" class="nav-link"><span class="nav-icon">👥</span> Project Team</a>
+        <a href="#progress" class="nav-link"><span class="nav-icon">🚀</span> Project Progress</a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="https://github.com/Kanchi-karthik/Resilient-UAV-Edge-Computing" target="_blank" class="github-btn">
+        <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        GitHub Repository ↗
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==============================================================================
+       MAIN CONTENT AREA
+       ============================================================================== -->
+  <main class="main-wrapper">
+    
+    <!-- Top Sticky Header -->
+    <header class="top-navbar">
+      <div class="nav-crumbs">
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+        <a href="index.html">Research Portal</a>
+        <span class="separator">/</span>
+        <span class="current">Project Overview</span>
+      </div>
+      <div class="top-actions">
+        <span class="badge-phase">● Phase 1 (Sem 3) Completed</span>
+        <a href="documentation.html" class="btn-header btn-header-primary">User Guide →</a>
+      </div>
+    </header>
+
+    <!-- Page Content Container -->
+    <div class="page-content">
+
+      <!-- ==============================================================================
+           3D INTERACTIVE HERO SECTION & AMRITA UAV DEPLOYMENT SCENARIO
+           ============================================================================== -->
+      <section id="overview" class="hero-3d-section">
+        <div class="hero-grid">
+          <div class="hero-text-block">
+            <div class="hero-pill">⚡ Department of Computer Science and Engineering</div>
+            <h1 class="hero-title">
+              Resilient <span class="highlight">UAV Edge Computing</span> for Disaster Response
+            </h1>
+            <p class="hero-desc">
+              A decentralized aerial edge computing framework executing <strong>Chain-Aware CBBA</strong> to eliminate task fragmentation, overcome aerodynamic hover barriers, and achieve sub-second mission-critical task turnaround above disaster zones.
+            </p>
+
+            <div class="hero-meta-strip">
+              <div class="meta-item">
+                <span class="meta-label">Investigator</span>
+                <span class="meta-val">Kanchi Karthik [CB.SC.P2CSE25016]</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Supervisor</span>
+                <span class="meta-val">Dr. Vishnuvarthan R</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Institution</span>
+                <span class="meta-val">Amrita Vishwa Vidyapeetham</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Core Protocol</span>
+                <span class="meta-val">Algorithm 1 (Chain-Aware CBBA)</span>
+              </div>
+            </div>
+
+            <div class="hero-buttons">
+              <a href="documentation.html" class="btn btn-primary">📖 Technical User Guide</a>
+              <a href="results.html" class="btn btn-secondary">📊 View Experimental Benchmarks</a>
+              <a href="https://github.com/Kanchi-karthik/Resilient-UAV-Edge-Computing" target="_blank" class="btn btn-secondary">
+                GitHub Repository ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive 3D Canvas / HUD Card -->
+          <div class="hero-interactive-card">
+            <div class="canvas-container">
+              <canvas id="uav3dCanvas"></canvas>
+              <div class="hud-overlay">
+                <span class="hud-pill">3D Swarm HUD · Live</span>
+                <span class="hud-pill">Drag to Orbit</span>
+              </div>
+              <div class="hud-telemetry">
+                <div class="telemetry-item">
+                  <span class="telemetry-label">Battery (4S)</span>
+                  <span id="hudBattery" class="telemetry-val">184.2 kJ</span>
+                </div>
+                <div class="telemetry-item">
+                  <span class="telemetry-label">Hover Power</span>
+                  <span class="telemetry-val">168.0 W</span>
+                </div>
+                <div class="telemetry-item">
+                  <span class="telemetry-label">Latency (Proposed)</span>
+                  <span id="hudLatency" class="telemetry-val">1.06 s</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- College Campus Photo Attachment Bar -->
+            <div class="campus-preview-bar">
+              <img src="assets/amrita_uav_hero.png" alt="Amrita Campus UAV Deployment" class="campus-thumbnail">
+              <div class="campus-info">
+                <h4>Amrita Vishwa Vidyapeetham Swarm Deployment</h4>
+                <p>Collaborative multi-UAV aerial computing tier operating over campus & disaster coordinates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================================
+           INTRODUCTION & OPERATIONAL CONTEXT
+           ============================================================================== -->
+      <section id="introduction" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Contextual Grounding</span>
+          <h2 class="section-title">Introduction and Operational Context</h2>
+          <p class="section-desc">
+            Examining why terrestrial computing fails in post-disaster scenarios and how autonomous rotary-wing UAV swarms bridge the communication and computing gap.
+          </p>
+        </div>
+
+        <div class="methodology-box">
+          <p style="margin-bottom: 16px; font-size: 1.02rem; color: #334155;">
+            Large-scale natural disasters (seismic earthquakes, hurricanes, flash floods) routinely obliterate terrestrial telecommunication base stations, fiber-optic backhauls, and power grids within minutes. Ground Internet of Things (IoT) sensors, geophones, and wearable medical trackers cannot route data to distant cloud data centers.
+          </p>
+          <p style="font-size: 1.02rem; color: #334155;">
+            Swarms of rotary-wing Unmanned Aerial Vehicles (UAVs) equipped with Multi-Access Edge Computing (MEC) servers provide a rapidly deployable aerial computing tier. Flying at altitudes between 50 m and 100 m, these vehicles ingest sensor data via high-capacity Air-to-Ground (A2G) links and coordinate over Air-to-Air (A2A) wireless mesh networks to execute emergency situational analytics directly above the disaster zone.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==============================================================================
+           PROJECT OBJECTIVES
+           ============================================================================== -->
+      <section id="objectives" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Phase 1 Scope</span>
+          <h2 class="section-title">Project Objectives (M.Tech Semester 3)</h2>
+          <p class="section-desc">
+            Four targeted technical milestones achieved during Dissertation Phase 1.
+          </p>
+        </div>
+
+        <div class="cards-grid-3">
+          <div class="app-card">
+            <div class="app-card-body">
+              <div class="brand-badge">Objective 1</div>
+              <h3 class="app-card-title">Momentum Aerodynamics Modeling</h3>
+              <p class="app-card-text">
+                Formulate rigorous actuator-disk momentum theory models capturing the exact propulsion power required to maintain steady hover (\(P_{\text{hover}} \approx 168.0\,\text{W}\)) vs. digital processing (\(10\text{--}15\,\text{W}\)).
+              </p>
+              <div class="app-card-footer">
+                <span>Model Calibration</span>
+                <strong>Zeng et al. (IEEE TWC)</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-card">
+            <div class="app-card-body">
+              <div class="brand-badge">Objective 2</div>
+              <h3 class="app-card-title">Chain-Aware CBBA (Algorithm 1)</h3>
+              <p class="app-card-text">
+                Design a decentralized auction protocol integrating an <strong>Atomic Chain Incentive Multiplier (\(\gamma = 1.5\))</strong> for pipeline co-location and a <strong>Pre-Bid Energy Feasibility Guard (\(E_{\text{reserve}} = 20\,\text{kJ}\))</strong>.
+              </p>
+              <div class="app-card-footer">
+                <span>Allocation Protocol</span>
+                <strong>Algorithm 1 (Fully Distributed)</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-card">
+            <div class="app-card-body">
+              <div class="brand-badge">Objective 3 & 4</div>
+              <h3 class="app-card-title">Extended iFogSim2 Benchmarking</h3>
+              <p class="app-card-text">
+                Extend the iFogSim2 simulator with 19 custom classes and execute comparative workload sweeps from 500 to 3,000 tasks against Greedy Offloading and Standard CBBA across 5 independent seeds.
+              </p>
+              <div class="app-card-footer">
+                <span>Validation Sweep</span>
+                <strong>500 to 3,000 Tasks (5 Seeds)</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================================
+           PROBLEM STATEMENT: THE AERODYNAMIC HOVER BARRIER & TASK FRAGMENTATION
+           ============================================================================== -->
+      <section id="problem" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Core Technical Bottleneck</span>
+          <h2 class="section-title">Problem Statement: Aerodynamic Hover Barrier & Task Fragmentation</h2>
+          <p class="section-desc">
+            Understanding how independent auction mechanisms create catastrophic energy drains and chain dependency deadlocks in aerial networks.
+          </p>
+        </div>
+
+        <div class="methodology-box" style="border-left: 5px solid var(--primary-red);">
+          <div class="methodology-grid">
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 12px;">
+                The Task Fragmentation Dilemma
+              </h3>
+              <p style="font-size: 0.95rem; color: #475569; line-height: 1.65; margin-bottom: 14px;">
+                Emergency workloads naturally arrive as multi-stage Directed Acyclic Graph (DAG) pipelines:
+                <br><strong>Stage 1 (Framing) → Stage 2 (Filtering) → Stage 3 (Inference)</strong>.
+              </p>
+              <p style="font-size: 0.95rem; color: #475569; line-height: 1.65; margin-bottom: 14px;">
+                Standard auction protocols evaluate tasks independently. As a result, Stage 1 is awarded to UAV \(\mathcal{U}_1\) while Stage 2 is awarded to UAV \(\mathcal{U}_2\). The downstream UAV \(\mathcal{U}_2\) cannot begin execution until the intermediate data payload is transmitted over the Air-to-Air wireless link.
+              </p>
+              <div style="background: #fff1f2; border: 1px solid #fecdd3; padding: 14px; border-radius: 8px;">
+                <strong style="color: #990000; font-size: 0.9rem;">Quantitative Idle Hover Energy Waste:</strong>
+                <p style="font-size: 0.88rem; color: #9f1239; margin-top: 4px;">
+                  A \(0.533\,\text{s}\) Air-to-Air wireless transmission delay forces the downstream UAV to hover idly, burning <strong>\(89.6\,\text{J}\)</strong> of propulsion energy per pipeline. Over 100 fragmented pipelines, this wastes <strong>\(8.96\,\text{kJ}\)</strong> (\(\approx 4.5\%\) of total battery capacity) producing zero compute progress.
+                </p>
+              </div>
+            </div>
+
+            <div class="diagram-card">
+              <img src="assets/architecture_ieee_bw.png" alt="Three-Tier Collaborative Architecture">
+              <div class="diagram-caption">Figure: Three-Tier Collaborative Aerial Edge Computing Topology under Disrupted Terrestrial Infrastructure.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================================
+           APPLICATION HORIZONS: AGRICULTURE, DEFENCE, AND EARTH CALAMITIES
+           ============================================================================== -->
+      <section id="applications" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Deployment Domains</span>
+          <h2 class="section-title">Application Horizons: Where UAV-MEC is Deployed</h2>
+          <p class="section-desc">
+            Rotary-wing aerial edge computing powers vital missions spanning humanitarian disaster relief, tactical defense operations, and smart precision agriculture.
+          </p>
+        </div>
+
+        <div class="cards-grid-3">
+          <!-- Card 1: Earth Calamities -->
+          <div class="app-card">
+            <div class="app-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=800&q=80" alt="Earth Calamities and Search Rescue" class="app-card-img">
+              <span class="app-card-badge">🚨 Disaster Response</span>
+            </div>
+            <div class="app-card-body">
+              <h3 class="app-card-title">Earth Calamities & Urban Collapse</h3>
+              <p class="app-card-text">
+                Following earthquakes and floods, UAVs process multi-spectral infrared imagery to detect body heat signatures of trapped victims beneath structural rubble and stream coordinate vectors to ground triage teams.
+              </p>
+              <div class="app-card-footer">
+                <span>Key Metric:</span>
+                <strong>Sub-second Turnaround</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Defence & Tactical Reconnaissance -->
+          <div class="app-card">
+            <div class="app-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80" alt="Defence Reconnaissance" class="app-card-img">
+              <span class="app-card-badge">🛡️ Tactical Defence</span>
+            </div>
+            <div class="app-card-body">
+              <h3 class="app-card-title">Defence & Contested Airspaces</h3>
+              <p class="app-card-text">
+                Autonomous swarms maintain Line-of-Sight tactical corridors in electronic-warfare environments where satellite uplinks are actively jammed, decentralized consensus auctions coordinate defensive border surveillance.
+              </p>
+              <div class="app-card-footer">
+                <span>Key Metric:</span>
+                <strong>Zero Single-Point-of-Failure</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Precision Agriculture -->
+          <div class="app-card">
+            <div class="app-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80" alt="Precision Agriculture" class="app-card-img">
+              <span class="app-card-badge">🌱 Precision Agriculture</span>
+            </div>
+            <div class="app-card-body">
+              <h3 class="app-card-title">Precision Agriculture & Forestry</h3>
+              <p class="app-card-text">
+                UAV swarms ingest sensor telemetry from soil moisture probes and leaf sensors, executing real-time vegetation indexing (NDVI) and localized micro-pesticide spraying without relying on fixed telecom infrastructure.
+              </p>
+              <div class="app-card-footer">
+                <span>Key Metric:</span>
+                <strong>Multi-stage Processing</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================================
+           METHODOLOGY & ALGORITHM 1 HIGHLIGHT
+           ============================================================================== -->
+      <section id="methodology" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Proposed Solution</span>
+          <h2 class="section-title">Methodology: Chain-Aware CBBA (Algorithm 1)</h2>
+          <p class="section-desc">
+            Eliminating task fragmentation through atomic pipeline incentives and battery feasibility guards.
+          </p>
+        </div>
+
+        <div class="methodology-box">
+          <div class="methodology-grid">
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 12px;">
+                Two Integrated Safeguards
+              </h3>
+              
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <div class="feature-icon">1</div>
+                  <div class="feature-text">
+                    <h4>Pre-Bid Energy Feasibility Guard</h4>
+                    <p>Evaluates hover, compute, and communication energy before committing bids. If \(E_{\text{est}} > E_{\text{rem}} - E_{\text{reserve}}\) (\(E_{\text{reserve}} = 20\,\text{kJ}\)), the bid is clamped to 0, preventing depleted UAVs from accepting unfinishable tasks.</p>
+                  </div>
+                </li>
+
+                <li class="feature-item">
+                  <div class="feature-icon">2</div>
+                  <div class="feature-text">
+                    <h4>Atomic Chain Incentive Multiplier (\(\gamma = 1.5\))</h4>
+                    <p>When a UAV already holds the predecessor stage in its local bundle, its bid is boosted by 50% (\(c_{ij} = 1.5 \times c_{ij}^{\text{base}}\)). This enforces pipeline co-location, reducing A2A data transfer delay to zero (\(t_{\text{transfer}} = 0\)).</p>
+                  </div>
+                </li>
+
+                <li class="feature-item">
+                  <div class="feature-icon">3</div>
+                  <div class="feature-text">
+                    <h4>18-Rule Decentralized Consensus</h4>
+                    <p>Peers exchange bid vectors over 802.11p mesh, deterministically resolving conflicts in polynomial time (\(\mathcal{O}(N \cdot D_{\text{mesh}})\)) in under 100 ms.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="diagram-card">
+              <img src="assets/algo1_flowchart_ieee_bw.png" alt="Algorithm 1 Flowchart">
+              <div class="diagram-caption">Figure: Logic Flowchart of Chain-Aware CBBA with Pre-Bid Energy Feasibility Guard.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================================
+           PROJECT TEAM
+           ============================================================================== -->
+      <section id="team" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Academic Affiliation</span>
+          <h2 class="section-title">Project Team and Supervision</h2>
+          <p class="section-desc">
+            Conducted at the Department of Computer Science and Engineering, Amrita School of Computing, Coimbatore.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar">KK</div>
+            <div class="team-info">
+              <h3>Kanchi Karthik</h3>
+              <div class="team-role">M.Tech Scholar · Roll No: CB.SC.P2CSE25016</div>
+              <div class="team-dept">
+                Department of Computer Science and Engineering<br>
+                Amrita School of Computing, Amrita Vishwa Vidyapeetham
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">VR</div>
+            <div class="team-info">
+              <h3>Dr. Vishnuvarthan R</h3>
+              <div class="team-role">Research Supervisor · Assistant Professor (Selection Grade)</div>
+              <div class="team-dept">
+                Department of Computer Science and Engineering<br>
+                Amrita School of Computing, Amrita Vishwa Vidyapeetham
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================================
+           PROJECT PROGRESS TIMELINE
+           ============================================================================== -->
+      <section id="progress" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Milestone Roadmap</span>
+          <h2 class="section-title">Dissertation Progress (Phase 1 vs. Phase 2)</h2>
+          <p class="section-desc">
+            Tracking achievements completed in Semester 3 and future extensions planned for Semester 4.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-point active"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Phase 1: Analytical Modeling & System Architecture</h4>
+                <span class="timeline-date">August – September 2026 (Completed)</span>
+              </div>
+              <p style="font-size: 0.88rem; color: #475569;">
+                Formulated three-tier UAV-MEC topology, Air-to-Ground probabilistic LoS/NLoS channel equations, Air-to-Air DSRC mesh latency, and rotary-wing momentum aerodynamics (\(P_{\text{hover}} \approx 168.0\,\text{W}\)).
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-point active"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Phase 1: Algorithm 1 Design & iFogSim2 Simulation</h4>
+                <span class="timeline-date">October – November 2026 (Completed)</span>
+              </div>
+              <p style="font-size: 0.88rem; color: #475569;">
+                Implemented Chain-Aware CBBA with \(\gamma = 1.5\) and Pre-Bid Energy Feasibility Guard in extended iFogSim2. Executed comparative sweeps (500–3,000 tasks, 5 seeds) demonstrating 97.3% task completion, 95.2% chain success, and &gt;90% consensus energy reduction.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-point"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Phase 2: Decentralized Runtime Stall Detection (Algorithm 2)</h4>
+                <span class="timeline-date">Semester 4 (Roadmap)</span>
+              </div>
+              <p style="font-size: 0.88rem; color: #475569;">
+                Autonomous peer heartbeat monitoring (\(H_{\text{thresh}} = 2.0\,\text{s}\)) and internal queue divergence tracking (\(\Delta Q_{\text{thresh}} = 5\) tasks) to detect in-flight battery dropouts and communication link failures.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-point"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Phase 2: Virtual Handover & Dynamic Recovery (Algorithm 3)</h4>
+                <span class="timeline-date">Semester 4 (Roadmap)</span>
+              </div>
+              <p style="font-size: 0.88rem; color: #475569;">
+                Decentralized 1-hop cooperative task migration to recover stalled pipeline stages without central coordinator intervention under severe wind disturbances.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Portal Footer -->
+    <footer class="portal-footer">
+      <div>
+        <strong>Resilient UAV Edge Computing Framework</strong> · M.Tech Dissertation Phase 1 (Semester 3)
+      </div>
+      <div>
+        Department of Computer Science & Engineering · Amrita School of Computing
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script src="js/three-hero.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
