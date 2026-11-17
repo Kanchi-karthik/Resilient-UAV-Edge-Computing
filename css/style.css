@@ -1,7 +1,7 @@
 /* ==============================================================================
    RESILIENT UAV EDGE COMPUTING DOCUMENTATION PORTAL
    Theme: Textured Crimson Red & Clean Academic White
-   Author: Kanchi Karthik [CB.SC.P2CSE25016] | Supervisor: Dr. Vishnuvarthan R
+   Author: Kanchi Karthik [CB.SC.P2CSE25016] | Supervisor: Dr. Vishnu S
    Amrita School of Computing, Amrita Vishwa Vidyapeetham
    ============================================================================== */
 
@@ -58,11 +58,14 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-main);
+  background-color: #f8fafc;
   color: var(--text-main);
   line-height: 1.65;
-  background-image: radial-gradient(#cbd5e1 0.75px, transparent 0.75px);
-  background-size: 24px 24px;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grainNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grainNoise)'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  background-repeat: repeat;
+  background-attachment: fixed;
   overflow-x: hidden;
 }
 
@@ -99,12 +102,10 @@ body {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0),
-    linear-gradient(135deg, rgba(255,255,255,0.04) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.04) 50%, rgba(255,255,255,0.04) 75%, transparent 75%, transparent);
-  background-size: 16px 16px, 32px 32px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='sidebarGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 1  0 1 0 0 1  0 0 1 0 1  0 0 0 0.085 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23sidebarGrain)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.95;
 }
 
 .sidebar-header {
