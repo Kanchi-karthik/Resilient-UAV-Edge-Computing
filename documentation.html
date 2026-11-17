@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Guide & Documentation | Resilient UAV Edge Computing</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/amrita_uav_hero.png">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- ==============================================================================
+       TEXTURED CRIMSON SIDEBAR
+       ============================================================================== -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-badge">M.Tech Phase 1 · 24CS798</div>
+      <h2 class="brand-title">UAV Edge Portal</h2>
+      <p class="brand-subtitle">Technical Documentation Manual</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <div class="nav-group-title">Navigation Portal</div>
+        <a href="index.html" class="nav-link">
+          <span class="nav-icon">🏠</span> Home & Overview
+        </a>
+        <a href="documentation.html" class="nav-link active">
+          <span class="nav-icon">📖</span> User Guide & Docs
+        </a>
+        <a href="results.html" class="nav-link">
+          <span class="nav-icon">📊</span> Results & Benchmarks
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">User Guide Contents</div>
+        <a href="#overview" class="nav-link"><span class="nav-icon">📌</span> Overview</a>
+        <a href="#requirements" class="nav-link"><span class="nav-icon">💻</span> Requirements</a>
+        <a href="#build" class="nav-link"><span class="nav-icon">⚙️</span> Configure & Build</a>
+        <a href="#run" class="nav-link"><span class="nav-icon">▶️</span> Run the Scenarios</a>
+        <a href="#options" class="nav-link"><span class="nav-icon">🎛️</span> Command-line Options</a>
+        <a href="#experiments" class="nav-link"><span class="nav-icon">🧪</span> Experiment Definitions</a>
+        <a href="#formulation" class="nav-link"><span class="nav-icon">📐</span> Core Math Formulation</a>
+        <a href="#outputs" class="nav-link"><span class="nav-icon">📁</span> Output Files</a>
+        <a href="#analysis" class="nav-link"><span class="nav-icon">📈</span> Analysis & Plotting</a>
+        <a href="#metrics" class="nav-link"><span class="nav-icon">📏</span> Metric Definitions</a>
+        <a href="#glossary" class="nav-link"><span class="nav-icon">📚</span> Glossary</a>
+        <a href="#faq" class="nav-link"><span class="nav-icon">❓</span> FAQ & Troubleshooting</a>
+        <a href="#layout" class="nav-link"><span class="nav-icon">🗂️</span> Repository Layout</a>
+        <a href="#license" class="nav-link"><span class="nav-icon">📄</span> License</a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="https://github.com/Kanchi-karthik/Resilient-UAV-Edge-Computing" target="_blank" class="github-btn">
+        <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        GitHub Repository ↗
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==============================================================================
+       MAIN CONTENT AREA
+       ============================================================================== -->
+  <main class="main-wrapper">
+    
+    <!-- Top Header -->
+    <header class="top-navbar">
+      <div class="nav-crumbs">
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+        <a href="index.html">Research Portal</a>
+        <span class="separator">/</span>
+        <span class="current">Technical User Guide</span>
+      </div>
+      <div class="top-actions">
+        <span class="badge-phase">● iFogSim2 Java Engine</span>
+        <a href="results.html" class="btn-header btn-header-primary">Results & Figures →</a>
+      </div>
+    </header>
+
+    <!-- Page Content Container -->
+    <div class="page-content">
+
+      <div class="section-header">
+        <span class="section-tag">System Documentation</span>
+        <h1 class="section-title">Technical User Guide & Execution Manual</h1>
+        <p class="section-desc">
+          Complete operational manual for configuring, building, running, and extending the Resilient UAV-MEC simulation harness in extended iFogSim2.
+        </p>
+      </div>
+
+      <!-- OVERVIEW -->
+      <section id="overview" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">Overview</h2>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin-bottom: 14px;">
+            This repository contains the full discrete-event simulation harness for modeling collaborative aerial edge computing over disrupted disaster regions. Built upon <strong>iFogSim2</strong> and <strong>CloudSim</strong>, it incorporates 19 custom research classes implementing rotary-wing quadrotor aerodynamics, probabilistic urban Air-to-Ground propagation, 802.11p DSRC Air-to-Air consensus gossip, and the proposed <strong>Chain-Aware CBBA</strong> protocol.
+          </p>
+          <div style="background: #f8fafc; border: 1px solid var(--border-light); padding: 14px 18px; border-radius: 8px;">
+            <p style="font-size: 0.88rem; color: #334155;">
+              <strong>Scope Constraint:</strong> In accordance with M.Tech Semester 3 dissertation guidelines, this manual details the design, configuration, and execution of <strong>Algorithm 1 (Chain-Aware CBBA)</strong>. Phase 2 runtime fault recovery mechanisms are framed as future research extensions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- REQUIREMENTS -->
+      <section id="requirements" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">System Requirements</h2>
+          <ul style="list-style-type: square; padding-left: 20px; font-size: 0.92rem; color: #475569; line-height: 1.8;">
+            <li><strong>Operating System:</strong> Windows 10/11, Ubuntu 20.04/22.04 LTS, or macOS (Apple Silicon / Intel).</li>
+            <li><strong>Java Runtime Environment:</strong> JDK 8, 11, 17, or 21 (Adoptium OpenJDK recommended).</li>
+            <li><strong>Integrated Development Environment:</strong> Eclipse IDE for Java Developers, IntelliJ IDEA, or VS Code with Java Extension Pack.</li>
+            <li><strong>Bundled Dependencies:</strong> Pre-packaged in the <code>jars/</code> directory (CloudSim 3.0.3, Apache Commons Math3 3.5, Google Guava 18.0, OpenCSV 5.9).</li>
+            <li><strong>Plotting & Analysis:</strong> Python 3.8+ with Matplotlib and NumPy (optional, for custom chart generation).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONFIGURE & BUILD -->
+      <section id="build" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">Configure & Build</h2>
+          <p style="font-size: 0.95rem; color: #475569; margin-bottom: 14px;">
+            Clone the repository and import it into your workspace:
+          </p>
+
+          <div class="code-block-container">
+            <div class="code-header">
+              <span class="code-title">Terminal / Git Bash</span>
+              <button class="copy-btn">Copy</button>
+            </div>
+            <pre><code># 1. Clone the repository
+git clone https://github.com/Kanchi-karthik/Resilient-UAV-Edge-Computing.git
+cd Resilient-UAV-Edge-Computing
+
+# 2. Build via CLI (compiles all Java packages into bin/)
+javac -cp ".;jars/*" -d bin src/org/cloudbus/cloudsim/*.java src/org/fog/*/*.java src/org/fog/test/proposed/*/*.java</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- RUN THE SCENARIOS -->
+      <section id="run" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">Run the Scenarios</h2>
+          <p style="font-size: 0.95rem; color: #475569; margin-bottom: 14px;">
+            Execute standard verification runs or automated benchmark sweeps:
+          </p>
+
+          <div class="code-block-container">
+            <div class="code-header">
+              <span class="code-title">Execution Commands (Java CLI)</span>
+              <button class="copy-btn">Copy</button>
+            </div>
+            <pre><code># Run default single-scenario simulation (10 UAVs, 130m radius, proposed SECBBA mode)
+java -cp ".;jars/*;bin" org.fog.test.proposed.SimulationRunner
+
+# Run workload scalability sweep (500 to 3,000 tasks across 5 seeds)
+java -cp ".;jars/*;bin" org.fog.test.proposed.experiment.ScalabilitySweep
+
+# Run comparative benchmarking (Greedy vs. Standard CBBA vs. Chain-Aware CBBA)
+java -cp ".;jars/*;bin" org.fog.test.proposed.experiment.ComparisonGenerator</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMMAND-LINE OPTIONS -->
+      <section id="options" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">CLI Parameters</span>
+          <h2 class="section-title">Command-Line Options & Configuration Flags</h2>
+        </div>
+
+        <div class="table-responsive">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>Option Flag</th>
+                <th>Default</th>
+                <th>Allowed Range</th>
+                <th>Functional Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--uavCount</code></td>
+                <td>10</td>
+                <td>4 to 25</td>
+                <td>Number of active rotary-wing UAV-MEC servers in Tier 2 swarm.</td>
+              </tr>
+              <tr>
+                <td><code>--radius</code></td>
+                <td>130.0 m</td>
+                <td>80 m to 250 m</td>
+                <td>Ground ingestion coverage radius per aerial node.</td>
+              </tr>
+              <tr>
+                <td><code>--taskCap</code></td>
+                <td>1000</td>
+                <td>500 to 3,000</td>
+                <td>Total number of multi-stage DAG tasks generated across operational time.</td>
+              </tr>
+              <tr>
+                <td><code>--seed</code></td>
+                <td>7</td>
+                <td>Any Long</td>
+                <td>Pseudorandom seed controlling Poisson arrival and device distributions.</td>
+              </tr>
+              <tr>
+                <td><code>--gamma</code></td>
+                <td>1.5</td>
+                <td>1.0 to 2.5</td>
+                <td>Atomic Chain Incentive Multiplier boosting predecessor-holding bids.</td>
+              </tr>
+              <tr>
+                <td><code>--eReserve</code></td>
+                <td>20,000 J</td>
+                <td>10 kJ to 50 kJ</td>
+                <td>Mandatory safe landing reserve threshold for Pre-Bid Energy Guard.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- EXPERIMENT DEFINITIONS -->
+      <section id="experiments" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Empirical Protocols</span>
+          <h2 class="section-title">Experiment Definitions: E1, E2, and E3</h2>
+        </div>
+
+        <div class="cards-grid-3">
+          <div class="app-card">
+            <div class="app-card-body">
+              <span class="brand-badge">Baseline E1</span>
+              <h3 class="app-card-title">Greedy Offloading</h3>
+              <p class="app-card-text">
+                Ground devices offload subtasks strictly to the nearest physical UAV with queue space. If the buffer is full, tasks are immediately discarded. Does not consider pipeline precedence or future stages.
+              </p>
+            </div>
+          </div>
+
+          <div class="app-card">
+            <div class="app-card-body">
+              <span class="brand-badge">Baseline E2</span>
+              <h3 class="app-card-title">Standard CBBA</h3>
+              <p class="app-card-text">
+                Classical consensus bundle algorithm (Choi et al., IEEE T-RO). Multiplier is inactive (\(\gamma = 1.0\)) and pre-bid energy feasibility guards are omitted. Triggers severe task fragmentation.
+              </p>
+            </div>
+          </div>
+
+          <div class="app-card">
+            <div class="app-card-body" style="border: 2px solid var(--primary-red);">
+              <span class="brand-badge" style="background: var(--primary-red); color: #fff;">Proposed E3</span>
+              <h3 class="app-card-title">Chain-Aware CBBA</h3>
+              <p class="app-card-text">
+                Our proposed protocol featuring Atomic Chain Multiplier (\(\gamma = 1.5\)) to enforce co-location, and Pre-Bid Energy Feasibility Guard (\(20\,\text{kJ}\)) to guarantee flight safety.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CORE MATHEMATICAL FORMULATION -->
+      <section id="formulation" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">Core Mathematical Formulations</h2>
+          
+          <h4 style="font-size: 1rem; color: #111827; margin: 16px 0 8px 0;">1. Momentum Aerodynamics & Steady Hover Power:</h4>
+          <p style="font-size: 0.92rem; color: #475569;">
+            $$P_{\text{hover}} = P_0 + (1 + k) \sqrt{\frac{W^3}{2 \rho_{\text{air}} A_{\text{total}}}} = 79.86 + 1.13 \times 78.30 \approx 168.0\,\text{W}$$
+          </p>
+
+          <h4 style="font-size: 1rem; color: #111827; margin: 16px 0 8px 0;">2. Pre-Bid Energy Feasibility Guard:</h4>
+          <p style="font-size: 0.92rem; color: #475569;">
+            $$E_{\text{est}}(j, i) = P_{\text{hover}}(t_{\text{comp}} + t_{\text{ingest}}) + P_{\text{cpu}} t_{\text{comp}} + P_{\text{comm}} t_{\text{ingest}}$$
+            $$\text{If } E_{\text{est}}(j, i) > E_{\text{rem}, i} - E_{\text{reserve}} \implies c_{ij} = 0$$
+          </p>
+
+          <h4 style="font-size: 1rem; color: #111827; margin: 16px 0 8px 0;">3. Atomic Chain Incentive Multiplier (\(\gamma = 1.5\)):</h4>
+          <p style="font-size: 0.92rem; color: #475569;">
+            $$c_{ij} = \begin{cases} 1.5 \times c_{ij}^{\text{base}}, & \text{if } \exists k \in \mathbf{b}_i \text{ such that } k \in \text{pred}(j) \\ c_{ij}^{\text{base}}, & \text{otherwise} \end{cases}$$
+          </p>
+        </div>
+      </section>
+
+      <!-- OUTPUT FILES -->
+      <section id="outputs" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Data Artifacts</span>
+          <h2 class="section-title">Output Files & Telemetry Logs</h2>
+        </div>
+
+        <div class="table-responsive">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>Generated CSV File</th>
+                <th>Content Description</th>
+                <th>Sample Columns</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>latency_proposed_*.csv</code></td>
+                <td>Per-task turnaround delay breakdown.</td>
+                <td><code>TaskId, Stage, WaitDelay, ExecDelay, A2ATransferDelay, TotalLatency</code></td>
+              </tr>
+              <tr>
+                <td><code>energy_per_uav_*.csv</code></td>
+                <td>Periodic energy consumption accounting per UAV.</td>
+                <td><code>Timestamp, UAV_Id, HoverEnergy, CpuEnergy, CommEnergy, BatteryRemaining</code></td>
+              </tr>
+              <tr>
+                <td><code>scheduler_decisions_*.csv</code></td>
+                <td>Decentralized auction bidding and consensus decisions.</td>
+                <td><code>Round, UAV_Id, TaskId, BaseBid, BoostedBid, WinningAgent, ConsensusStatus</code></td>
+              </tr>
+              <tr>
+                <td><code>task_lifecycle_*.csv</code></td>
+                <td>State transitions from generation to completion/drop.</td>
+                <td><code>TaskId, ArrivalTime, ScheduledTime, CompletedTime, Status, AssignedUAV</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ANALYSIS & PLOTTING -->
+      <section id="analysis" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">Analysis & Plotting Workflow</h2>
+          <p style="font-size: 0.95rem; color: #475569; margin-bottom: 14px;">
+            The simulation harness provides automated Java and Python utilities to consolidate multi-seed sweeps and generate publication figures:
+          </p>
+
+          <div class="code-block-container">
+            <div class="code-header">
+              <span class="code-title">Plotting Commands</span>
+              <button class="copy-btn">Copy</button>
+            </div>
+            <pre><code># Consolidate benchmark CSV logs across all 5 seeds
+java -cp ".;jars/*;bin" org.fog.test.proposed.experiment.ComparisonGenerator
+
+# Generate high-resolution IEEE publication figures
+python generate_ieee_figures.py</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- METRIC DEFINITIONS -->
+      <section id="metrics" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">Metric Definitions</h2>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 12px;">
+              <strong>Task Completion Rate (\(\eta_{\text{comp}}\)):</strong> Total completed subtasks divided by total generated tasks across all ground clusters.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>Pipeline Chain Success Rate (\(\eta_{\text{chain}}\)):</strong> Percentage of 3-stage workflows where all three constituent subtasks (Ingestion, Filtering, Inference) successfully complete before deadline \(T^{\max}\).
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>Mean Effective Latency (\(\bar{L}\)):</strong> Average turnaround latency per completed task, including queuing delay, CPU execution time, and Air-to-Air transfer latency.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>Coordination Communication Energy (\(E_{\text{coord}}\)):</strong> Cumulative radio transmission energy expended across the swarm on 802.11p consensus broadcast packets.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>Task Fragmentation Ratio:</strong> Fraction of multi-stage workflows whose constituent stages were split across different physical UAVs.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- GLOSSARY -->
+      <section id="glossary" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Terminology</span>
+          <h2 class="section-title">Technical Glossary</h2>
+        </div>
+
+        <div class="table-responsive">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>Full Form / Expansion</th>
+                <th>Definition in Research Context</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>UAV-MEC</strong></td>
+                <td>Unmanned Aerial Vehicle Multi-Access Edge Computing</td>
+                <td>Rotary-wing drone equipped with onboard computing server acting as an aerial edge node.</td>
+              </tr>
+              <tr>
+                <td><strong>CBBA</strong></td>
+                <td>Consensus-Based Bundle Algorithm</td>
+                <td>Decentralized market-based auction protocol combining greedy bundle construction and consensus.</td>
+              </tr>
+              <tr>
+                <td><strong>DAG</strong></td>
+                <td>Directed Acyclic Graph</td>
+                <td>Structured computational workflow with sequential data precedence between stages.</td>
+              </tr>
+              <tr>
+                <td><strong>DSRC</strong></td>
+                <td>Dedicated Short-Range Communications</td>
+                <td>IEEE 802.11p wireless standard operating at 5.9 GHz for inter-UAV aerial mesh networking.</td>
+              </tr>
+              <tr>
+                <td><strong>DMG</strong></td>
+                <td>Diminishing Marginal Gain</td>
+                <td>Mathematical property guaranteeing submodular utility degradation as local bundles grow.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- FAQ & TROUBLESHOOTING -->
+      <section id="faq" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">FAQ & Troubleshooting</h2>
+          <details style="margin-bottom: 12px; cursor: pointer;">
+            <summary><strong>Q: Eclipse throws "Cannot find symbol: CloudSim" during build?</strong></summary>
+            <p style="margin-top: 6px; font-size: 0.9rem; color: #475569;">
+              Ensure all JAR files in the <code>jars/</code> directory are explicitly added to the project build path. In Eclipse: Right-click Project → Build Path → Configure Build Path → Libraries → Add JARs...
+            </p>
+          </details>
+
+          <details style="margin-bottom: 12px; cursor: pointer;">
+            <summary><strong>Q: OutOfMemoryError occurs during 3,000-task sweeps?</strong></summary>
+            <p style="margin-top: 6px; font-size: 0.9rem; color: #475569;">
+              Allocate adequate heap space to the Java Virtual Machine by appending <code>-Xmx4g</code> (e.g. <code>java -Xmx4g -cp ".;jars/*;bin" ...</code>).
+            </p>
+          </details>
+
+          <details style="margin-bottom: 12px; cursor: pointer;">
+            <summary><strong>Q: How do I change the multiplier parameter \(\gamma\)?</strong></summary>
+            <p style="margin-top: 6px; font-size: 0.9rem; color: #475569;">
+              Modify <code>ProposedParams.DEP_BONUS_MULTIPLIER</code> in <code>ProposedParams.java</code> or pass it as an override argument during experiment initialization.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- REPOSITORY LAYOUT -->
+      <section id="layout" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">Repository Layout</h2>
+          <div class="code-block-container">
+            <div class="code-header">
+              <span class="code-title">Clean Semester 3 Architecture</span>
+            </div>
+            <pre><code>Resilient-UAV-Edge-Computing/
+├── assets/          # 8 publication-grade diagrams & experimental curves
+├── docs/            # In-depth mathematical formulas & Algorithm 1 breakdown
+├── jars/            # Simulation runtime libraries & dependencies
+├── results_phase1/  # Phase 1 simulation CSV benchmark logs
+├── src/             # Clean Java source code (Algorithm 1: Chain-Aware CBBA only)
+│   ├── org/cloudbus/cloudsim/
+│   ├── org/fog/entities/
+│   └── org/fog/test/proposed/
+│       ├── coordination/secbba/
+│       ├── energy/
+│       └── experiment/
+├── topologies/      # Simulation network and device topologies
+├── .gitignore       # Clean Git exclusion rules
+├── LICENSE.txt      # MIT License
+└── README.md        # Publication-grade main project documentation</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- LICENSE -->
+      <section id="license" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">License & Academic Attribution</h2>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.7;">
+            This codebase is licensed under the <strong>MIT License</strong>. The underlying simulation engine is built upon open-source frameworks <a href="https://github.com/Cloudslab/iFogSim" target="_blank" style="color: var(--primary-red);">iFogSim2</a> and <a href="https://github.com/Cloudslab/cloudsim" target="_blank" style="color: var(--primary-red);">CloudSim</a> developed by the CLOUDS Laboratory, University of Melbourne.
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Portal Footer -->
+    <footer class="portal-footer">
+      <div>
+        <strong>Resilient UAV Edge Computing Framework</strong> · M.Tech Dissertation Phase 1 (Semester 3)
+      </div>
+      <div>
+        Department of Computer Science & Engineering · Amrita School of Computing
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

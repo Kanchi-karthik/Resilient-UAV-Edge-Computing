@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results & Benchmarks | Resilient UAV Edge Computing</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/amrita_uav_hero.png">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- ==============================================================================
+       TEXTURED CRIMSON SIDEBAR
+       ============================================================================== -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-badge">M.Tech Phase 1 · 24CS798</div>
+      <h2 class="brand-title">UAV Edge Portal</h2>
+      <p class="brand-subtitle">Experimental Results & Figures</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group">
+        <div class="nav-group-title">Navigation Portal</div>
+        <a href="index.html" class="nav-link">
+          <span class="nav-icon">🏠</span> Home & Overview
+        </a>
+        <a href="documentation.html" class="nav-link">
+          <span class="nav-icon">📖</span> User Guide & Docs
+        </a>
+        <a href="results.html" class="nav-link active">
+          <span class="nav-icon">📊</span> Results & Benchmarks
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">Results Navigation</div>
+        <a href="#summary" class="nav-link"><span class="nav-icon">📌</span> Results Summary</a>
+        <a href="#explorer" class="nav-link"><span class="nav-icon">🔍</span> Interactive Explorer</a>
+        <a href="#setup" class="nav-link"><span class="nav-icon">⚙️</span> 1 · Simulation Setup</a>
+        <a href="#e1" class="nav-link"><span class="nav-icon">📉</span> 2 · E1 Greedy Baseline</a>
+        <a href="#e2" class="nav-link"><span class="nav-icon">⚖️</span> 3 · E2 Standard CBBA</a>
+        <a href="#e3" class="nav-link"><span class="nav-icon">🚀</span> 4 · E3 Proposed Method</a>
+        <a href="#comparison" class="nav-link"><span class="nav-icon">📊</span> 5 · Peak Comparison</a>
+        <a href="#side-by-side" class="nav-link"><span class="nav-icon">↔️</span> Side-by-Side Viewer</a>
+        <a href="#all-figures" class="nav-link"><span class="nav-icon">🖼️</span> All Publication Figures</a>
+        <a href="#limitations" class="nav-link"><span class="nav-icon">🔮</span> Limitations & Roadmap</a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="https://github.com/Kanchi-karthik/Resilient-UAV-Edge-Computing" target="_blank" class="github-btn">
+        <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        GitHub Repository ↗
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==============================================================================
+       MAIN CONTENT AREA
+       ============================================================================== -->
+  <main class="main-wrapper">
+    
+    <!-- Top Header -->
+    <header class="top-navbar">
+      <div class="nav-crumbs">
+        <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+        <a href="index.html">Research Portal</a>
+        <span class="separator">/</span>
+        <span class="current">Results & Figures</span>
+      </div>
+      <div class="top-actions">
+        <span class="badge-phase">● Empirical Verification Complete</span>
+        <a href="documentation.html" class="btn-header btn-header-primary">User Guide →</a>
+      </div>
+    </header>
+
+    <!-- Page Content Container -->
+    <div class="page-content">
+
+      <div class="section-header">
+        <span class="section-tag">Empirical Evaluation</span>
+        <h1 class="section-title">Comparative Results & Performance Figures</h1>
+        <p class="section-desc">
+          Comprehensive empirical benchmarking of Chain-Aware CBBA against Greedy Offloading and Standard CBBA across workloads from 500 to 3,000 tasks over 5 independent random seeds.
+        </p>
+      </div>
+
+      <!-- RESULTS SUMMARY -->
+      <section id="summary" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">Headline Performance Summary</h2>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin-bottom: 16px;">
+            Under peak operational stress (3,000 multi-stage DAG tasks), the proposed Chain-Aware CBBA protocol consistently outperforms baseline heuristics across all four core performance metrics:
+          </p>
+
+          <div class="cards-grid-3">
+            <div class="app-card">
+              <div class="app-card-body" style="text-align: center;">
+                <span style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Task Completion</span>
+                <h3 style="font-size: 2.2rem; font-weight: 800; color: #16a34a; margin: 8px 0;">97.3%</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">+12.4% over CBBA (84.9%)<br>+25.2% over Greedy (72.1%)</p>
+              </div>
+            </div>
+
+            <div class="app-card">
+              <div class="app-card-body" style="text-align: center;">
+                <span style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Chain Success Rate</span>
+                <h3 style="font-size: 2.2rem; font-weight: 800; color: #16a34a; margin: 8px 0;">95.2%</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">+23.5% over CBBA (71.7%)<br>+46.9% over Greedy (48.3%)</p>
+              </div>
+            </div>
+
+            <div class="app-card">
+              <div class="app-card-body" style="text-align: center;">
+                <span style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Consensus Energy</span>
+                <h3 style="font-size: 2.2rem; font-weight: 800; color: #2563eb; margin: 8px 0;">11.05 J</h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">&gt;90% energy saved<br>vs. 365.3 J (Standard CBBA)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE EXPLORER -->
+      <section id="explorer" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Interactive Analysis</span>
+          <h2 class="section-title">Interactive Metric Explorer</h2>
+          <p class="section-desc">
+            Filter and examine experimental metrics across workload arrival intensities:
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap;">
+          <button class="btn btn-secondary metric-tab-btn active" data-target="all">All Metrics</button>
+          <button class="btn btn-secondary metric-tab-btn" data-target="cardCompletion">Task Completion Rate</button>
+          <button class="btn btn-secondary metric-tab-btn" data-target="cardLatency">Mean Latency</button>
+          <button class="btn btn-secondary metric-tab-btn" data-target="cardEnergy">Coordination Energy</button>
+          <button class="btn btn-secondary metric-tab-btn" data-target="cardChain">Chain Success Rate</button>
+        </div>
+
+        <div class="cards-grid-3" style="grid-template-columns: repeat(2, 1fr);">
+          <!-- Metric 1: Completion -->
+          <div class="app-card metric-detail-card" id="cardCompletion">
+            <div class="app-card-img-wrap" style="height: 240px;">
+              <img src="assets/03_tasks_completed_dropped.png" alt="Task Completion Sweep" class="app-card-img">
+            </div>
+            <div class="app-card-body">
+              <h3 class="app-card-title">Task Completion Rate (\(\eta_{\text{comp}}\))</h3>
+              <p class="app-card-text">
+                Chain-Aware CBBA sustains completion between 97.3% and 99.4% across all workload sweeps. In contrast, Greedy Offloading degrades rapidly to 72.1% as single-hop UAV queues saturate.
+              </p>
+            </div>
+          </div>
+
+          <!-- Metric 2: Latency -->
+          <div class="app-card metric-detail-card" id="cardLatency">
+            <div class="app-card-img-wrap" style="height: 240px;">
+              <img src="assets/04_effective_latency.png" alt="Latency Sweep" class="app-card-img">
+            </div>
+            <div class="app-card-body">
+              <h3 class="app-card-title">Mean Effective Latency (\(\bar{L}\))</h3>
+              <p class="app-card-text">
+                Chain-Aware CBBA displays a near-flat latency profile (1.06 s to 1.08 s) by enforcing pipeline co-location. Standard CBBA spikes to 1.82 s and Greedy reaches 2.42 s due to queue backlogs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Metric 3: Coordination Energy -->
+          <div class="app-card metric-detail-card" id="cardEnergy">
+            <div class="app-card-img-wrap" style="height: 240px;">
+              <img src="assets/05_coordination_energy.png" alt="Coordination Energy Sweep" class="app-card-img">
+            </div>
+            <div class="app-card-body">
+              <h3 class="app-card-title">Coordination Communication Energy (\(E_{\text{coord}}\))</h3>
+              <p class="app-card-text">
+                Standard CBBA triggers continuous rebidding churn for fragmented subtasks (365.3 J). Chain-Aware CBBA stabilizes bundle assignments early, consuming only 11.05 J (&gt;90% reduction).
+              </p>
+            </div>
+          </div>
+
+          <!-- Metric 4: Chain Success Rate -->
+          <div class="app-card metric-detail-card" id="cardChain">
+            <div class="app-card-img-wrap" style="height: 240px;">
+              <img src="assets/09_chain_success_rate.png" alt="Chain Success Rate Sweep" class="app-card-img">
+            </div>
+            <div class="app-card-body">
+              <h3 class="app-card-title">Pipeline Chain Success Rate (\(\eta_{\text{chain}}\))</h3>
+              <p class="app-card-text">
+                95.2% of all generated 3-stage workflows complete before hard deadlines under peak workload (3,000 tasks) with Chain-Aware CBBA, compared to 71.7% for CBBA and 48.3% for Greedy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETUP -->
+      <section id="setup" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">1 · Simulation Setup & Physical Calibration</h2>
+          <p style="font-size: 0.95rem; color: #475569; margin-bottom: 14px;">
+            The simulation is calibrated according to momentum aerodynamics and physical wireless standards:
+          </p>
+          <ul style="list-style-type: square; padding-left: 20px; font-size: 0.92rem; color: #475569; line-height: 1.8;">
+            <li><strong>Quadrotor Platform:</strong> 4 rotors, radius \(r = 0.20\,\text{m}\), gross mass \(2.0\,\text{kg}\), hover power \(P_{\text{hover}} \approx 168.0\,\text{W}\).</li>
+            <li><strong>Battery System:</strong> 4S LiPo battery pack (\(E_{\text{battery}} = 200\,\text{kJ}\)), reserve floor \(E_{\text{reserve}} = 20\,\text{kJ}\).</li>
+            <li><strong>Air-to-Ground Link:</strong> LTE/5G sidelink, \(10\,\text{MHz}\) bandwidth, probabilistic urban LoS/NLoS path loss.</li>
+            <li><strong>Air-to-Air Mesh:</strong> IEEE 802.11p DSRC (\(5.9\,\text{GHz}\)), nominal rate \(15\,\text{Mbps}\).</li>
+            <li><strong>Workloads:</strong> Poisson process (\(\lambda = 5.0\) to \(17.5\,\text{s}^{-1}\)), scaling from 500 to 3,000 tasks over 5 random seeds.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- E1 GREEDY BASELINE -->
+      <section id="e1" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">2 · E1: Greedy Offloading Baseline</h2>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.7;">
+            Under Greedy Offloading, ground devices offload tasks to the physically closest UAV. Because task generation is geographically clustered around disaster hotspots, the nearest UAV's buffer quickly saturates. At 3,000 tasks, the completion rate collapses to <strong>72.1%</strong>, and the end-to-end chain success rate drops to a dismal <strong>48.3%</strong>. Furthermore, intermediate data transfers are uncoordinated, leading to high mean latency (2.42 s).
+          </p>
+        </div>
+      </section>
+
+      <!-- E2 STANDARD CBBA -->
+      <section id="e2" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">3 · E2: Standard CBBA Baseline</h2>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.7;">
+            Standard CBBA achieves distributed consensus and improves completion to 84.9%. However, because it treats multi-stage tasks as independent items (\(\gamma = 1.0\)), consecutive stages are fragmented across different UAVs (task fragmentation ratio = 58.9%). Downstream UAVs hover idly waiting for wireless data transfers, triggering deadline expirations and causing consensus coordination energy to escalate exponentially to <strong>365.3 J</strong> due to continuous rebidding churn.
+          </p>
+        </div>
+      </section>
+
+      <!-- E3 PROPOSED METHOD -->
+      <section id="e3" class="content-section">
+        <div class="methodology-box" style="border: 2px solid var(--primary-red);">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">4 · E3: Proposed Chain-Aware CBBA</h2>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.7;">
+            By integrating the Atomic Chain Multiplier (\(\gamma = 1.5\)) and Pre-Bid Energy Feasibility Guard (\(20\,\text{kJ}\)), Chain-Aware CBBA achieves atomic co-location for 100% of pipeline chains (task fragmentation = 0.0%). Intermediate Air-to-Air transfer latency is eliminated, stabilizing turnaround latency at <strong>1.06 s</strong>, achieving <strong>97.3%</strong> completion, <strong>95.2%</strong> chain success, and slashing coordination communication energy by <strong>&gt;90%</strong> to just <strong>11.05 J</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- COMPARISON TABLE -->
+      <section id="comparison" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Numerical Benchmarks</span>
+          <h2 class="section-title">5 · Full Numerical Comparison (Peak Workload: 3,000 Tasks)</h2>
+        </div>
+
+        <div class="table-responsive">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>Evaluation Metric</th>
+                <th>E1 · Greedy Offloading</th>
+                <th>E2 · Standard CBBA</th>
+                <th>E3 · Chain-Aware CBBA (Proposed)</th>
+                <th>Performance Gain / Benefit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Task Completion Rate (\(\eta_{\text{comp}}\))</strong></td>
+                <td>72.1%</td>
+                <td>84.9%</td>
+                <td><strong style="color: #16a34a;">97.3%</strong></td>
+                <td><span class="pill-success">+12.4% over CBBA</span></td>
+              </tr>
+              <tr>
+                <td><strong>Pipeline Chain Success Rate (\(\eta_{\text{chain}}\))</strong></td>
+                <td>48.3%</td>
+                <td>71.7%</td>
+                <td><strong style="color: #16a34a;">95.2%</strong></td>
+                <td><span class="pill-success">+23.5% over CBBA</span></td>
+              </tr>
+              <tr>
+                <td><strong>Mean Effective Latency (\(\bar{L}\))</strong></td>
+                <td>2.42 s</td>
+                <td>1.82 s</td>
+                <td><strong style="color: #2563eb;">1.06 s</strong></td>
+                <td><span class="pill-success">41.8% latency reduction</span></td>
+              </tr>
+              <tr>
+                <td><strong>Coordination Communication Energy (\(E_{\text{coord}}\))</strong></td>
+                <td>28.4 J</td>
+                <td>365.3 J</td>
+                <td><strong style="color: #2563eb;">11.05 J</strong></td>
+                <td><span class="pill-success">&gt;90% energy saved</span></td>
+              </tr>
+              <tr>
+                <td><strong>Task Fragmentation Ratio</strong></td>
+                <td>68.4%</td>
+                <td>58.9%</td>
+                <td><strong style="color: #16a34a;">0.0% (Atomic)</strong></td>
+                <td><span class="pill-success">Zero pipeline fragmentation</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SIDE-BY-SIDE VIEWER -->
+      <section id="side-by-side" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Comparative Architectural Analysis</span>
+          <h2 class="section-title">Side-by-Side Architectural Viewer</h2>
+        </div>
+
+        <div class="cards-grid-3" style="grid-template-columns: 1fr 1fr;">
+          <div class="app-card">
+            <div class="app-card-body">
+              <span class="brand-badge" style="background: #ef4444; color: #fff;">Standard CBBA (Flawed)</span>
+              <h3 class="app-card-title">Independent Task Bidding</h3>
+              <p class="app-card-text">
+                • Treats subtasks as decoupled, flat items.<br>
+                • Stages 1, 2, and 3 scattered across 3 separate UAVs.<br>
+                • Downstream nodes hover idly waiting for wireless transfers.<br>
+                • Cumulative hover waste: 89.6 J per pipeline.<br>
+                • Frequent rebidding loops drain 365.3 J radio energy.
+              </p>
+            </div>
+          </div>
+
+          <div class="app-card" style="border: 2px solid var(--primary-red);">
+            <div class="app-card-body">
+              <span class="brand-badge" style="background: var(--primary-red); color: #fff;">Chain-Aware CBBA (Proposed)</span>
+              <h3 class="app-card-title">Dependency-Aware Atomic Bidding</h3>
+              <p class="app-card-text">
+                • Dynamically boosts successor bids by \(\gamma = 1.5\).<br>
+                • Enforces all stages to co-locate on the same UAV.<br>
+                • Air-to-Air transfer latency reduced to zero (\(t_{\text{transfer}} = 0\)).<br>
+                • Zero idle hover energy waste.<br>
+                • Coordination radio energy slashed to 11.05 J (&gt;90% savings).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ALL FIGURES -->
+      <section id="all-figures" class="content-section">
+        <div class="section-header">
+          <span class="section-tag">Visual Verification</span>
+          <h2 class="section-title">All Publication Figures & Traces</h2>
+        </div>
+
+        <div class="cards-grid-3" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="diagram-card">
+            <img src="assets/architecture_ieee_bw.png" alt="Architecture">
+            <div class="diagram-caption">Figure 1: Collaborative Three-Tier UAV-MEC Disaster Response Network Architecture.</div>
+          </div>
+
+          <div class="diagram-card">
+            <img src="assets/algo1_flowchart_ieee_bw.png" alt="Algorithm Flowchart">
+            <div class="diagram-caption">Figure 2: Flowchart of Chain-Aware CBBA with Pre-Bid Energy Feasibility Guard.</div>
+          </div>
+
+          <div class="diagram-card">
+            <img src="assets/ide_explorer_crop.png" alt="Package Structure">
+            <div class="diagram-caption">Figure 3: Compiled Package Hierarchy of Extended iFogSim2 Simulation Engine.</div>
+          </div>
+
+          <div class="diagram-card">
+            <img src="assets/ide_terminal_crop.png" alt="Terminal Execution Trace">
+            <div class="diagram-caption">Figure 4: Simulation Terminal Execution Trace Confirming Atomic Co-location & Energy Guard.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIMITATIONS & ROADMAP -->
+      <section id="limitations" class="content-section">
+        <div class="methodology-box">
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: #111827; margin-bottom: 12px;">Research Limitations & Phase 2 Roadmap</h2>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.7; margin-bottom: 14px;">
+            <strong>Phase 1 Scope Boundaries:</strong> The Phase 1 dissertation focuses strictly on static and workload-scaled decentralized allocation (Algorithm 1) under steady-state conditions. In Phase 2 (Semester 4), the framework will be extended with runtime resilience:
+          </p>
+          <ul style="list-style-type: square; padding-left: 20px; font-size: 0.92rem; color: #475569; line-height: 1.8;">
+            <li><strong>Algorithm 2 (Decentralized Runtime Stall Detection):</strong> Heartbeat monitoring (\(H_{\text{thresh}} = 2.0\,\text{s}\)) and queue divergence checks (\(\Delta Q_{\text{thresh}} = 5\)) detecting mid-flight node dropouts.</li>
+            <li><strong>Algorithm 3 (Virtual Handover & Recovery):</strong> Dynamic 1-hop cooperative task migration mitigating task stalls caused by severe wind gusts or hardware faults.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Portal Footer -->
+    <footer class="portal-footer">
+      <div>
+        <strong>Resilient UAV Edge Computing Framework</strong> · M.Tech Dissertation Phase 1 (Semester 3)
+      </div>
+      <div>
+        Department of Computer Science & Engineering · Amrita School of Computing
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
